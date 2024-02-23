@@ -1,7 +1,12 @@
 <h1>Flats (<%= @flats.count %>)</h1>
-
-<ul>
+<div class="d-flex">
   <% @flats.each do |flat| %>
-    <li><%= flat.name %></li>
+    <div class="p-2 m-3" style="width: 18rem;">
+      <%= image_tag("", :alt => "rss feed") %>
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= flat.description %></p>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
